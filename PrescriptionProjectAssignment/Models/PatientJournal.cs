@@ -10,5 +10,6 @@ namespace PrescriptionProjectAssignment.Models
         public int Id { get; set; }
         public Patient Patient { get; set; }
         public List<Prescription> Prescriptions { get; set; } = new List<Prescription>();
+        public List<JournalLog> JournaLogs {  get; set; } = new List<JournalLog>();
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PrescriptionProjectAssignment.Context;
+using PrescriptionProjectAssignment.Models;
 
 namespace PrescriptionProjectAssignment
 {
@@ -29,7 +30,7 @@ namespace PrescriptionProjectAssignment
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
 
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<BaseApplicationUser, IdentityRole>()
                .AddEntityFrameworkStores<ApplicationContext>()
                .AddDefaultTokenProviders();
 
