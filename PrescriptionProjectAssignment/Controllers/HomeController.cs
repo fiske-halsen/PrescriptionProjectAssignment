@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using PrescriptionProjectAssignment.Models;
-using System;
-using System.Collections.Generic;
+using PrescriptionProjectAssignment.ViewModels;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-// penis slikkerssss
 namespace PrescriptionProjectAssignment.Controllers
 {
     public class HomeController : Controller

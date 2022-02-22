@@ -1,6 +1,6 @@
 using System;
 
-namespace PrescriptionProjectAssignment.Models
+namespace PrescriptionProjectAssignment.ViewModels
 {
     public class ErrorViewModel
     {
