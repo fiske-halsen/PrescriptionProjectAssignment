@@ -14,8 +14,6 @@ namespace PrescriptionProjectAssignment.Models
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        [ForeignKey("PatientJournalId")]
-        public int PatientJournalId { get; set; }
         public PatientJournal PatientJournal { get; set; }
     }
 }

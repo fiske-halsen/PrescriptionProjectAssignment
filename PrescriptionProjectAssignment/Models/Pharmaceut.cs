@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PrescriptionProjectAssignment.Models
 {
@@ -15,7 +10,7 @@ namespace PrescriptionProjectAssignment.Models
         public string Email { get; set; }
         public string Password { get; set; }
         [ForeignKey("PharmacyId")]
-        public int PharmarcyId { get; set; }
+        public int PharmacyId { get; set; }
         public Pharmacy Pharmacy { get; set; }
     }
 }

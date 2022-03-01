@@ -13,8 +13,6 @@ namespace PrescriptionProjectAssignment.Models
         [ForeignKey("CityInfoId")]
         public int CityInfoId { get; set; }
         public CityInfo CityInfo { get; set; }
-        [ForeignKey("PharmacyId")]
-        public int PharmacyId { get; set; }
         public Pharmacy Pharmacy { get; set; }
     }
 }

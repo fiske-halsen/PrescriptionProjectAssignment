@@ -26,7 +26,7 @@ namespace PrescriptionProjectAssignment.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<int?>("CityInfoId")
+                    b.Property<int>("CityInfoId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Street")
@@ -37,6 +37,26 @@ namespace PrescriptionProjectAssignment.Migrations
                     b.HasIndex("CityInfoId");
 
                     b.ToTable("Addresses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CityInfoId = 1,
+                            Street = "Tornehegnet"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CityInfoId = 1,
+                            Street = "Brunellevej"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CityInfoId = 2,
+                            Street = "Ringkøbinggade"
+                        });
                 });
 
             modelBuilder.Entity("PrescriptionProjectAssignment.Models.CityInfo", b =>
@@ -55,6 +75,20 @@ namespace PrescriptionProjectAssignment.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CityInfos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            City = "Taastrup",
+                            ZipCode = "2630"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            City = "Nordhavn",
+                            ZipCode = "2100"
+                        });
                 });
 
             modelBuilder.Entity("PrescriptionProjectAssignment.Models.Doctor", b =>
@@ -78,7 +112,25 @@ namespace PrescriptionProjectAssignment.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Doctor");
+                    b.ToTable("Doctors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "lukas@ergrim.com",
+                            FirstName = "Lukas",
+                            LastName = "Stoltz-Andersen",
+                            Password = "+G1M5GvKwY7BqKJ5vGfJ3F3u6GzBbDM/Ni5CRq3eqwk="
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "sumit@ergrim.com",
+                            FirstName = "Sumit",
+                            LastName = "Sumit",
+                            Password = "p9GbbCUoo6SIIrrF5zZ59ddp/epYkPoelGcHRHhQVx8="
+                        });
                 });
 
             modelBuilder.Entity("PrescriptionProjectAssignment.Models.JournalLog", b =>
@@ -123,6 +175,24 @@ namespace PrescriptionProjectAssignment.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Medicines");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Amount = 2,
+                            ExpirationDate = new DateTime(2022, 3, 31, 16, 40, 0, 989, DateTimeKind.Local).AddTicks(8268),
+                            Instructions = "Take one daily",
+                            Name = "Aspirin"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Amount = 2,
+                            ExpirationDate = new DateTime(2022, 3, 31, 16, 40, 0, 991, DateTimeKind.Local).AddTicks(3004),
+                            Instructions = "Take one daily",
+                            Name = "Cialis"
+                        });
                 });
 
             modelBuilder.Entity("PrescriptionProjectAssignment.Models.Patient", b =>
@@ -144,15 +214,27 @@ namespace PrescriptionProjectAssignment.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("text");
 
-                    b.Property<int>("PatientJournalId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("PatientJournalId")
-                        .IsUnique();
-
                     b.ToTable("Patients");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "Patient1@ergrim.com",
+                            FirstName = "Patient1",
+                            LastName = "Panda",
+                            Password = "QbXqudtBjOXbB3n6SzxBX2KyN4sTVyVvGqD36XGcQsw="
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "Patient2@ergrim.com",
+                            FirstName = "Patient2",
+                            LastName = "Ko",
+                            Password = "xs8g00J3WbV7jUkDzUtdaKWGJIxjNgqbbAwBQfpTQ68="
+                        });
                 });
 
             modelBuilder.Entity("PrescriptionProjectAssignment.Models.PatientJournal", b =>
@@ -162,9 +244,27 @@ namespace PrescriptionProjectAssignment.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+                    b.Property<int>("PatientId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("PatientId")
+                        .IsUnique();
+
                     b.ToTable("PatientJournals");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            PatientId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            PatientId = 2
+                        });
                 });
 
             modelBuilder.Entity("PrescriptionProjectAssignment.Models.Pharmaceut", b =>
@@ -186,7 +286,7 @@ namespace PrescriptionProjectAssignment.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("text");
 
-                    b.Property<int?>("PharmacyId")
+                    b.Property<int>("PharmacyId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -194,6 +294,26 @@ namespace PrescriptionProjectAssignment.Migrations
                     b.HasIndex("PharmacyId");
 
                     b.ToTable("Pharmaceuts");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "phil@ergrim.com",
+                            FirstName = "Phillip",
+                            LastName = "Andersen",
+                            Password = "UffT7TwPrlyvLohiREVZsExOGf/Cgr7YX9FwiivE7yU=",
+                            PharmacyId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "seb@erflot.com",
+                            FirstName = "Sebastian",
+                            LastName = "Hansen",
+                            Password = "dWN5CBoKRyPPoWH8gmTbInvPTFiceOAgbizNheKgazQ=",
+                            PharmacyId = 2
+                        });
                 });
 
             modelBuilder.Entity("PrescriptionProjectAssignment.Models.Pharmacy", b =>
@@ -215,6 +335,20 @@ namespace PrescriptionProjectAssignment.Migrations
                         .IsUnique();
 
                     b.ToTable("Pharmacies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AddressId = 1,
+                            Name = "Pharmacy Nordhavn"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AddressId = 2,
+                            Name = "Pharmarcy Taastrup"
+                        });
                 });
 
             modelBuilder.Entity("PrescriptionProjectAssignment.Models.Prescription", b =>
@@ -227,16 +361,16 @@ namespace PrescriptionProjectAssignment.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<int?>("DoctorId")
+                    b.Property<int>("DoctorId")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("MedicineId")
+                    b.Property<int>("MedicineId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
-                    b.Property<int?>("PatientJournalId")
+                    b.Property<int>("PatientJournalId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -248,13 +382,33 @@ namespace PrescriptionProjectAssignment.Migrations
                     b.HasIndex("PatientJournalId");
 
                     b.ToTable("Prescriptions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2022, 3, 1, 16, 40, 0, 991, DateTimeKind.Local).AddTicks(3599),
+                            DoctorId = 1,
+                            MedicineId = 1,
+                            PatientJournalId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2022, 3, 1, 16, 40, 0, 991, DateTimeKind.Local).AddTicks(4196),
+                            DoctorId = 2,
+                            MedicineId = 2,
+                            PatientJournalId = 2
+                        });
                 });
 
             modelBuilder.Entity("PrescriptionProjectAssignment.Models.Address", b =>
                 {
                     b.HasOne("PrescriptionProjectAssignment.Models.CityInfo", "CityInfo")
                         .WithMany("Addresses")
-                        .HasForeignKey("CityInfoId");
+                        .HasForeignKey("CityInfoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("CityInfo");
                 });
@@ -268,22 +422,24 @@ namespace PrescriptionProjectAssignment.Migrations
                     b.Navigation("PatientJournal");
                 });
 
-            modelBuilder.Entity("PrescriptionProjectAssignment.Models.Patient", b =>
+            modelBuilder.Entity("PrescriptionProjectAssignment.Models.PatientJournal", b =>
                 {
-                    b.HasOne("PrescriptionProjectAssignment.Models.PatientJournal", "PatientJournal")
-                        .WithOne("Patient")
-                        .HasForeignKey("PrescriptionProjectAssignment.Models.Patient", "PatientJournalId")
+                    b.HasOne("PrescriptionProjectAssignment.Models.Patient", "Patient")
+                        .WithOne("PatientJournal")
+                        .HasForeignKey("PrescriptionProjectAssignment.Models.PatientJournal", "PatientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("PatientJournal");
+                    b.Navigation("Patient");
                 });
 
             modelBuilder.Entity("PrescriptionProjectAssignment.Models.Pharmaceut", b =>
                 {
                     b.HasOne("PrescriptionProjectAssignment.Models.Pharmacy", "Pharmacy")
                         .WithMany("Pharmaceuts")
-                        .HasForeignKey("PharmacyId");
+                        .HasForeignKey("PharmacyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Pharmacy");
                 });
@@ -303,15 +459,21 @@ namespace PrescriptionProjectAssignment.Migrations
                 {
                     b.HasOne("PrescriptionProjectAssignment.Models.Doctor", "Doctor")
                         .WithMany("Prescriptions")
-                        .HasForeignKey("DoctorId");
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("PrescriptionProjectAssignment.Models.Medicine", "Medicine")
                         .WithMany()
-                        .HasForeignKey("MedicineId");
+                        .HasForeignKey("MedicineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("PrescriptionProjectAssignment.Models.PatientJournal", "PatientJournal")
                         .WithMany("Prescriptions")
-                        .HasForeignKey("PatientJournalId");
+                        .HasForeignKey("PatientJournalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Doctor");
 
@@ -335,11 +497,14 @@ namespace PrescriptionProjectAssignment.Migrations
                     b.Navigation("Prescriptions");
                 });
 
+            modelBuilder.Entity("PrescriptionProjectAssignment.Models.Patient", b =>
+                {
+                    b.Navigation("PatientJournal");
+                });
+
             modelBuilder.Entity("PrescriptionProjectAssignment.Models.PatientJournal", b =>
                 {
                     b.Navigation("JournaLogs");
-
-                    b.Navigation("Patient");
 
                     b.Navigation("Prescriptions");
                 });
