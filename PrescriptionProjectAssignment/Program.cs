@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using PrescriptionProjectAssignment.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace PrescriptionProjectAssignment
     {
         public static void Main(string[] args)
         {
+            EmailService.SendEmail("jalla");
             CreateHostBuilder(args).Build().Run();
         }
 

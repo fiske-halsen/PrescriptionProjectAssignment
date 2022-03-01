@@ -8,37 +8,6 @@ namespace PrescriptionProjectAssignment.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "Discriminator",
-                table: "AspNetUsers",
-                type: "text",
-                nullable: false,
-                defaultValue: "");
-
-            migrationBuilder.AddColumn<string>(
-                name: "FirstName",
-                table: "AspNetUsers",
-                type: "text",
-                nullable: true);
-
-            migrationBuilder.AddColumn<string>(
-                name: "LastName",
-                table: "AspNetUsers",
-                type: "text",
-                nullable: true);
-
-            migrationBuilder.AddColumn<int>(
-                name: "PatientJournalId",
-                table: "AspNetUsers",
-                type: "integer",
-                nullable: true);
-
-            migrationBuilder.AddColumn<int>(
-                name: "PharmacyId",
-                table: "AspNetUsers",
-                type: "integer",
-                nullable: true);
-
             migrationBuilder.CreateTable(
                 name: "CityInfos",
                 columns: table => new
@@ -51,6 +20,22 @@ namespace PrescriptionProjectAssignment.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CityInfos", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Doctor",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    FirstName = table.Column<string>(type: "text", nullable: true),
+                    LastName = table.Column<string>(type: "text", nullable: true),
+                    Email = table.Column<string>(type: "text", nullable: true),
+                    Password = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Doctor", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -108,24 +93,40 @@ namespace PrescriptionProjectAssignment.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     LastAccess = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UserId = table.Column<string>(type: "text", nullable: true),
                     PatientJournalId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_JournalLogs", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_JournalLogs_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_JournalLogs_PatientJournals_PatientJournalId",
                         column: x => x.PatientJournalId,
                         principalTable: "PatientJournals",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Patients",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    FirstName = table.Column<string>(type: "text", nullable: true),
+                    LastName = table.Column<string>(type: "text", nullable: true),
+                    Email = table.Column<string>(type: "text", nullable: true),
+                    Password = table.Column<string>(type: "text", nullable: true),
+                    PatientJournalId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Patients", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Patients_PatientJournals_PatientJournalId",
+                        column: x => x.PatientJournalId,
+                        principalTable: "PatientJournals",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -138,15 +139,15 @@ namespace PrescriptionProjectAssignment.Migrations
                     PatientJournalId = table.Column<int>(type: "integer", nullable: true),
                     MedicineId = table.Column<int>(type: "integer", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    DoctorId = table.Column<string>(type: "text", nullable: true)
+                    DoctorId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Prescriptions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Prescriptions_AspNetUsers_DoctorId",
+                        name: "FK_Prescriptions_Doctor_DoctorId",
                         column: x => x.DoctorId,
-                        principalTable: "AspNetUsers",
+                        principalTable: "Doctor",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -183,16 +184,28 @@ namespace PrescriptionProjectAssignment.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_AspNetUsers_PatientJournalId",
-                table: "AspNetUsers",
-                column: "PatientJournalId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_AspNetUsers_PharmacyId",
-                table: "AspNetUsers",
-                column: "PharmacyId");
+            migrationBuilder.CreateTable(
+                name: "Pharmaceuts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    FirstName = table.Column<string>(type: "text", nullable: true),
+                    LastName = table.Column<string>(type: "text", nullable: true),
+                    Email = table.Column<string>(type: "text", nullable: true),
+                    Password = table.Column<string>(type: "text", nullable: true),
+                    PharmacyId = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pharmaceuts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Pharmaceuts_Pharmacies_PharmacyId",
+                        column: x => x.PharmacyId,
+                        principalTable: "Pharmacies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Addresses_CityInfoId",
@@ -205,9 +218,15 @@ namespace PrescriptionProjectAssignment.Migrations
                 column: "PatientJournalId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_JournalLogs_UserId",
-                table: "JournalLogs",
-                column: "UserId");
+                name: "IX_Patients_PatientJournalId",
+                table: "Patients",
+                column: "PatientJournalId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Pharmaceuts_PharmacyId",
+                table: "Pharmaceuts",
+                column: "PharmacyId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pharmacies_AddressId",
@@ -229,45 +248,27 @@ namespace PrescriptionProjectAssignment.Migrations
                 name: "IX_Prescriptions_PatientJournalId",
                 table: "Prescriptions",
                 column: "PatientJournalId");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_AspNetUsers_PatientJournals_PatientJournalId",
-                table: "AspNetUsers",
-                column: "PatientJournalId",
-                principalTable: "PatientJournals",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_AspNetUsers_Pharmacies_PharmacyId",
-                table: "AspNetUsers",
-                column: "PharmacyId",
-                principalTable: "Pharmacies",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_AspNetUsers_PatientJournals_PatientJournalId",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_AspNetUsers_Pharmacies_PharmacyId",
-                table: "AspNetUsers");
-
             migrationBuilder.DropTable(
                 name: "JournalLogs");
 
             migrationBuilder.DropTable(
-                name: "Pharmacies");
+                name: "Patients");
+
+            migrationBuilder.DropTable(
+                name: "Pharmaceuts");
 
             migrationBuilder.DropTable(
                 name: "Prescriptions");
 
             migrationBuilder.DropTable(
-                name: "Addresses");
+                name: "Pharmacies");
+
+            migrationBuilder.DropTable(
+                name: "Doctor");
 
             migrationBuilder.DropTable(
                 name: "Medicines");
@@ -276,35 +277,10 @@ namespace PrescriptionProjectAssignment.Migrations
                 name: "PatientJournals");
 
             migrationBuilder.DropTable(
+                name: "Addresses");
+
+            migrationBuilder.DropTable(
                 name: "CityInfos");
-
-            migrationBuilder.DropIndex(
-                name: "IX_AspNetUsers_PatientJournalId",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropIndex(
-                name: "IX_AspNetUsers_PharmacyId",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
-                name: "Discriminator",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
-                name: "FirstName",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
-                name: "LastName",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
-                name: "PatientJournalId",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
-                name: "PharmacyId",
-                table: "AspNetUsers");
         }
     }
 }

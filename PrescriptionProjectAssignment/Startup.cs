@@ -28,12 +28,6 @@ namespace PrescriptionProjectAssignment
 
             services.AddDbContext<ApplicationContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
-
-
-            services.AddIdentity<BaseApplicationUser, IdentityRole>()
-               .AddEntityFrameworkStores<ApplicationContext>()
-               .AddDefaultTokenProviders();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

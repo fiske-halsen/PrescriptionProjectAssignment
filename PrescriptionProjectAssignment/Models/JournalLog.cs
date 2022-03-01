@@ -9,7 +9,6 @@ namespace PrescriptionProjectAssignment.Models
     {
         public int Id { get; set; }
         public DateTime LastAccess { get; set; }
-        public BaseApplicationUser User { get; set; }
         public PatientJournal PatientJournal { get; set; }
     }
 }
