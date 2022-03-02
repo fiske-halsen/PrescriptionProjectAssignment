@@ -12,5 +12,8 @@ namespace PrescriptionProjectAssignment.Models
         [ForeignKey("PharmacyId")]
         public int PharmacyId { get; set; }
         public Pharmacy Pharmacy { get; set; }
+        [ForeignKey("RoleId")]
+        public int RoleId { get; set; }
+        public Role Role { get; set; }
     }
 }

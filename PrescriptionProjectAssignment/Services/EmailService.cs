@@ -26,7 +26,7 @@ namespace PrescriptionProjectAssignment.Services
             };
 
             MailAddress FromEmail = new MailAddress("dbassignmenttwopostgres@gmail.com", "Db Assignment Demo");
-            MailAddress ToEmail = new MailAddress("dbassignmenttwopostgres@gmail.com", "Db Assignment Demo");
+            MailAddress ToEmail = new MailAddress("lukasbangstoltz@gmail.com", "Db Assignment Demo");
             MailMessage Message = new MailMessage()
             {
                 From = FromEmail,

@@ -22,6 +22,7 @@ namespace PrescriptionProjectAssignment.Context
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Pharmaceut> Pharmaceuts { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<Role> Role { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -31,6 +32,14 @@ namespace PrescriptionProjectAssignment.Context
 
         public static void Seed(ModelBuilder builder)
         {
+
+            builder.Entity<Role>().HasData(
+                new Role { Id = 1, Name = "Doctor" },
+                new Role { Id = 2, Name = "Pharmaceut" },
+                new Role { Id = 3, Name = "Patient" }
+                );
+
+
             builder.Entity<CityInfo>().HasData(
                 new CityInfo { Id = 1, ZipCode = "2630", City = "Taastrup" },
                 new CityInfo { Id = 2, ZipCode = "2100", City = "Nordhavn" }
@@ -48,18 +57,18 @@ namespace PrescriptionProjectAssignment.Context
                 );
 
             builder.Entity<Pharmaceut>().HasData(
-                new Pharmaceut { Id = 1, FirstName = "Phillip", LastName = "Andersen", Email = "phil@ergrim.com", Password = GetHashedPassword("PhilTheGod"), PharmacyId = 1 },
-                new Pharmaceut { Id = 2, FirstName = "Sebastian", LastName = "Hansen", Email = "seb@erflot.com", Password = GetHashedPassword("SebTheBot"), PharmacyId = 2 }
+                new Pharmaceut { Id = 1, FirstName = "Phillip", LastName = "Andersen", Email = "phil@ergrim.com", Password = GetHashedPassword("PhilTheGod"), PharmacyId = 1, RoleId = 2 },
+                new Pharmaceut { Id = 2, FirstName = "Sebastian", LastName = "Hansen", Email = "seb@erflot.com", Password = GetHashedPassword("SebTheBot"), PharmacyId = 2, RoleId = 2 }
                 );
 
             builder.Entity<Doctor>().HasData(
-                new Doctor { Id = 1, FirstName = "Lukas", LastName = "Stoltz-Andersen", Email = "lukas@ergrim.com", Password = GetHashedPassword("luketest123") },
-                new Doctor { Id = 2, FirstName = "Sumit", LastName = "Sumit", Email = "sumit@ergrim.com", Password = GetHashedPassword("sumittest123") }
+                new Doctor { Id = 1, FirstName = "Lukas", LastName = "Stoltz-Andersen", Email = "lukas@ergrim.com", Password = GetHashedPassword("luketest123"), RoleId = 1 },
+                new Doctor { Id = 2, FirstName = "Sumit", LastName = "Sumit", Email = "sumit@ergrim.com", Password = GetHashedPassword("sumittest123") , RoleId = 1  }
                 );
 
             builder.Entity<Patient>().HasData(
-                new Patient { Id = 1, FirstName = "Patient1", LastName = "Panda", Email = "Patient1@ergrim.com", Password = GetHashedPassword("Patient1") },
-                new Patient { Id = 2, FirstName = "Patient2", LastName = "Ko", Email = "Patient2@ergrim.com", Password = GetHashedPassword("Patient2") }
+                new Patient { Id = 1, FirstName = "Patient1", LastName = "Panda", Email = "Patient1@ergrim.com", Password = GetHashedPassword("Patient1"), RoleId = 3},
+                new Patient { Id = 2, FirstName = "Patient2", LastName = "Ko", Email = "Patient2@ergrim.com", Password = GetHashedPassword("Patient2"), RoleId = 3 }
                 );
 
             builder.Entity<PatientJournal>().HasData(
