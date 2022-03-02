@@ -5,6 +5,9 @@ using PrescriptionProjectAssignment.Models;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using System;
+using System.Threading.Tasks;
+using Npgsql;
+
 
 namespace PrescriptionProjectAssignment.Context
 {
@@ -106,5 +109,8 @@ namespace PrescriptionProjectAssignment.Context
 
             return hashed;
         }
+
+       
+
     }
 }

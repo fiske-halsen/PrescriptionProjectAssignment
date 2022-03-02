@@ -1,0 +1,225 @@
+﻿++Solution 'PrescriptionProjectAssignment' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:PrescriptionProjectAssignment.sln
+++PrescriptionProjectAssignment
+i:{00000000-0000-0000-0000-000000000000}:PrescriptionProjectAssignment
+++Connected Services 
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:>193
+++Dependencies
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:>192
+++Properties
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\properties\
+++wwwroot
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\
+++Context
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\context\
+++ApplicationContext.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\context\applicationcontext.cs
+++Controllers
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\controllers\
+++Migrations
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\migrations\
+++20220301154001_TestData1.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\migrations\20220301154001_testdata1.cs
+++20220302100359_TestData2.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\migrations\20220302100359_testdata2.cs
+++20220302100639_TestData3.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\migrations\20220302100639_testdata3.cs
+++ApplicationContextModelSnapshot.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\migrations\applicationcontextmodelsnapshot.cs
+++Models
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\
+++Address.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\address.cs
+++CityInfo.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\cityinfo.cs
+++Doctor.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\doctor.cs
+++JournalLog.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\journallog.cs
+++Medicine.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\medicine.cs
+++Patient.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\patient.cs
+++PatientJournal.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\patientjournal.cs
+++Pharmaceut.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\pharmaceut.cs
+++Pharmacy.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\pharmacy.cs
+++Prescription.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\prescription.cs
+++Role.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\models\role.cs
+++Services
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\services\
+++EmailService.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\services\emailservice.cs
+++ViewModels
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\viewmodels\
+++Views
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\views\
+++appsettings.json
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\appsettings.json
+++Program.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\program.cs
+++Startup.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\startup.cs
+++No service dependencies discovered
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:>194
+++Analyzers
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:analyzers
+++Frameworks
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:frameworks
+++Packages
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:packages
+++launchSettings.json
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\properties\launchsettings.json
+++css
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\css\
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\
+++js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\js\
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\js\
+++lib
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\
+++favicon.ico
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\favicon.ico
+++HomeController.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\controllers\homecontroller.cs
+++20220301154001_TestData1.Designer.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\migrations\20220301154001_testdata1.designer.cs
+++20220302100359_TestData2.Designer.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\migrations\20220302100359_testdata2.designer.cs
+++20220302100639_TestData3.Designer.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\migrations\20220302100639_testdata3.designer.cs
+++ErrorViewModel.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\viewmodels\errorviewmodel.cs
+++Home
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\views\home\
+++Shared
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\views\shared\
+++_ViewImports.cshtml
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\views\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\views\_viewstart.cshtml
+++appsettings.Development.json
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.14\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.AspNetCore.App
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\microsoft.netcore.app
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore (5.0.14)
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:>321
+++Microsoft.AspNetCore.Mvc.NewtonsoftJson (5.0.14)
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:>320
+++Microsoft.EntityFrameworkCore (5.0.14)
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:>319
+++Microsoft.EntityFrameworkCore.Tools (5.0.14)
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:>323
+++Npgsql.EntityFrameworkCore.PostgreSQL (5.0.10)
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:>322
+++site.css
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\css\site.css
+++site.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\js\site.js
+++bootstrap
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\
+++jquery
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery\
+++jquery-validation
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery-validation-unobtrusive\
+++Index.cshtml
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\views\home\index.cshtml
+++Privacy.cshtml
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\views\home\privacy.cshtml
+++_Layout.cshtml
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\views\shared\_layout.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\views\shared\_validationscriptspartial.cshtml
+++Error.cshtml
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\views\shared\error.cshtml
+++dist
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery\dist\
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery-validation\dist\
+++LICENSE
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\license
+++LICENSE.txt
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery\license.txt
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+++LICENSE.md
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery-validation\license.md
+++jquery.validate.unobtrusive.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+++jquery.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery\dist\jquery.js
+++additional-methods.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery-validation\dist\additional-methods.js
+++jquery.validate.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++bootstrap.css
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+++bootstrap-grid.css
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+++bootstrap-reboot.css
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+++bootstrap.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+++jquery.min.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery\dist\jquery.min.js
+++additional-methods.min.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+++jquery.validate.min.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++bootstrap.css.map
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+++bootstrap.min.css
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+++bootstrap-grid.css.map
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+++bootstrap-grid.min.css
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+++bootstrap-reboot.css.map
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+++bootstrap-reboot.min.css
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+++bootstrap.bundle.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+++bootstrap.js.map
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+++bootstrap.min.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+++jquery.min.map
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\jquery\dist\jquery.min.map
+++bootstrap.min.css.map
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+++bootstrap-grid.min.css.map
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+++bootstrap-reboot.min.css.map
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+++bootstrap.bundle.js.map
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+++bootstrap.bundle.min.js
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+++bootstrap.min.js.map
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+++bootstrap.bundle.min.js.map
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+++QueryDB.cs
+i:{e8f87141-bd4a-4d3e-9095-a64dc9fd9762}:c:\users\lukas\skrivebord\soft 1 sem\db\opgaver\db hand in 2\prescriptionprojectassignment\services\querydb.cs

@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PrescriptionProjectAssignment.ViewModels;
 using System.Diagnostics;
+using System.Threading.Tasks;
+
 namespace PrescriptionProjectAssignment.Controllers
 {
     public class HomeController : Controller
@@ -19,8 +21,9 @@ namespace PrescriptionProjectAssignment.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> PrivacyAsync()
         {
+           await Services.QueryDB.QueryDBTestAsync();
             return View();
         }
 
