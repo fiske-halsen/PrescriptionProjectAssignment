@@ -23,7 +23,7 @@ namespace PrescriptionProjectAssignment.Context
         public DbSet<Pharmaceut> Pharmaceuts { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Role> Role { get; set; }
-
+        //test
         protected override void OnModelCreating(ModelBuilder builder)
         {
             Seed(builder);
