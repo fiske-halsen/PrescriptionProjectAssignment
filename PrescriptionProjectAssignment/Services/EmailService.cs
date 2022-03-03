@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrescriptionProjectAssignment.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,7 +10,14 @@ namespace PrescriptionProjectAssignment.Services
 {
     public class EmailService
     {
-        public static async void SendEmail(string receiver)
+        private readonly DataAccess _dataAccess;
+
+        public EmailService(DataAccess dataAccess)
+        {
+            _dataAccess = dataAccess;
+        }
+
+        public async void SendEmail(string receiver)
         {
             SmtpClient Client = new SmtpClient()
             {
@@ -26,7 +34,7 @@ namespace PrescriptionProjectAssignment.Services
             };
 
             MailAddress FromEmail = new MailAddress("dbassignmenttwopostgres@gmail.com", "Db Assignment Demo");
-            MailAddress ToEmail = new MailAddress("lukasbangstoltz@gmail.com", "Db Assignment Demo");
+            MailAddress ToEmail = new MailAddress(receiver, "Db Assignment Demo");
             MailMessage Message = new MailMessage()
             {
                 From = FromEmail,
@@ -45,6 +53,15 @@ namespace PrescriptionProjectAssignment.Services
                 throw;
             }
             
+        }
+
+        public async Task CheckPrescriptionExpirationDate()
+        {
+           var dailyPrescriptionReminders = await _dataAccess.GetDailyEmailPrescriptionReminders();
+            foreach (var receiver in dailyPrescriptionReminders)
+            {
+                SendEmail(receiver.email);
+            }
         }
     }
 }

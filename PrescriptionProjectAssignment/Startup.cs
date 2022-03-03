@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PrescriptionProjectAssignment.Context;
 using PrescriptionProjectAssignment.Models;
+using PrescriptionProjectAssignment.Repository;
+using PrescriptionProjectAssignment.Services;
 
 namespace PrescriptionProjectAssignment
 {
@@ -29,7 +31,17 @@ namespace PrescriptionProjectAssignment
 
             services.AddDbContext<ApplicationContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            
             services.AddSingleton<IConfiguration>(Configuration);
+
+            services.AddSingleton<DapperContext>();
+
+            services.AddScoped<DataAccess>();
+
+            services.AddScoped<EmailService>();
+
+            services.AddScoped<TimerService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
