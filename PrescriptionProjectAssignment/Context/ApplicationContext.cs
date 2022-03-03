@@ -70,7 +70,7 @@ namespace PrescriptionProjectAssignment.Context
                 );
 
             builder.Entity<Patient>().HasData(
-                new Patient { Id = 1, FirstName = "Patient1", LastName = "Panda", Email = "Patient1@ergrim.com", Password = GetHashedPassword("Patient1"), RoleId = 3},
+                new Patient { Id = 1, FirstName = "Patient1", LastName = "Panda", Email = "lukasbangstoltz@gmail.com", Password = GetHashedPassword("Patient1"), RoleId = 3},
                 new Patient { Id = 2, FirstName = "Patient2", LastName = "Ko", Email = "Patient2@ergrim.com", Password = GetHashedPassword("Patient2"), RoleId = 3 }
                 );
 
